@@ -26,8 +26,14 @@ class Solution:
     """
     def isAnagram(self, s: str, t: str) -> bool:
         """
-        Count all character frequency and put into a dict, then compare 2 dicts.
-        2 strings are anagram if 2 dicts is equal.
+        Idea:
+            Count all character frequency and put into a dict, then compare 2 \
+            dicts. 2 strings are anagram if 2 dicts is equal.
+        Time complexity:
+            O(max(len(s), len(t))).
+        Space complexity:
+            O(len(s) + len(t)). Worst case is no character duplicates in s and \
+            t.
         """
         return _get_char_freq(s) == _get_char_freq(t)
 
